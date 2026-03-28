@@ -76,7 +76,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl blur-2xl opacity-30 dark:opacity-20" />
                 <div className="relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/image0_(2).jpeg"
+                    src="https://i.ibb.co/wrg5NcRc/himmm.jpg"
                     alt="Goodness Semilore"
                     width={400}
                     height={500}
