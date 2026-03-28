@@ -1,39 +1,18 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Code, Brain, Zap, Package, Users, Lightbulb } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
-const skills = [
-  {
-    name: 'Web Development',
-    icon: Code,
-    description: 'Modern web applications with React, Next.js, and TypeScript',
-  },
-  {
-    name: 'Artificial Intelligence',
-    icon: Brain,
-    description: 'AI automation and intelligent solutions',
-  },
-  {
-    name: 'Solar Technology',
-    icon: Zap,
-    description: 'Sustainable energy solutions and consulting',
-  },
-  {
-    name: 'Digital Product Development',
-    icon: Package,
-    description: 'End-to-end product development and delivery',
-  },
-  {
-    name: 'Virtual Assistance',
-    icon: Users,
-    description: 'Workflow optimization and productivity enhancement',
-  },
-  {
-    name: 'Critical Thinking',
-    icon: Lightbulb,
-    description: 'Problem-solving and strategic planning',
-  },
+const techStack = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'Git & GitHub',
+  'Canva',
+  'ChatGPT',
+  'Fireflies',
+  'NotebookLM',
+  'Claude',
 ];
 
 export function SkillsSection() {
@@ -71,36 +50,26 @@ export function SkillsSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
             <span className="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
-              Skills & Expertise
+              Tech Stack
             </span>
           </h2>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-12 text-lg">
-            Combining technical excellence with creative problem-solving
+            Tools and technologies I work with
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skills.map((skill, index) => {
-              const Icon = skill.icon;
-              return (
-                <div
-                  key={skill.name}
-                  className="group p-8 rounded-2xl border-2 border-gray-200 dark:border-gray-800 hover:border-blue-400 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                  style={{
-                    animationDelay: `${index * 100}ms`,
-                  }}
-                >
-                  <div className="mb-4 inline-block p-3 rounded-lg bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-950 dark:to-cyan-950 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="h-8 w-8 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
-                    {skill.name}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {skill.description}
-                  </p>
-                </div>
-              );
-            })}
+          <div className="flex flex-wrap justify-center gap-3">
+            {techStack.map((tech, index) => (
+              <Badge
+                key={tech}
+                variant="secondary"
+                className="px-4 py-2 text-sm hover:scale-110 transition-transform duration-300 cursor-default"
+                style={{
+                  animationDelay: `${index * 50}ms`,
+                }}
+              >
+                {tech}
+              </Badge>
+            ))}
           </div>
         </div>
       </div>
