@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, Mail, Github, Twitter, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -33,29 +33,61 @@ export function HeroSection() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="space-y-6 order-2 lg:order-1">
-              <div className="space-y-3">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                  <span className="block text-gray-900 dark:text-white">
-                    Hi, I'm <span className="text-blue-600 dark:text-blue-400">Goodness Semilore</span>
-                  </span>
-                </h1>
+              <div className="space-y-4">
+                <div>
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-2">
+                    <span className="bg-gradient-to-r from-gray-900 via-blue-600 to-gray-900 dark:from-white dark:via-blue-400 dark:to-white bg-clip-text text-transparent">
+                      Goodness Semilore
+                    </span>
+                  </h1>
+                </div>
 
-                <p className="text-xl md:text-2xl font-medium text-gray-700 dark:text-gray-300">
-                  AI-Certified Virtual Assistant | Developer
+                <p className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-100">
+                  Full Stack Developer | AI-Powered Virtual Assistant | Solar Tech Enthusiast
                 </p>
 
-                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Helping businesses improve productivity and digital workflows using AI tools.
+                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
+                  I build modern web applications, help businesses grow with AI tools, and support digital productivity.
                 </p>
+
+                <div className="flex gap-4 pt-2">
+                  <a
+                    href="https://github.com/revolt4l"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors"
+                    aria-label="GitHub"
+                  >
+                    <Github className="h-5 w-5 text-gray-700 dark:text-gray-300" />
+                  </a>
+                  <a
+                    href="https://x.com/revolt4l?s=21"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors"
+                    aria-label="Twitter"
+                  >
+                    <Twitter className="h-5 w-5 text-gray-700 dark:text-gray-300" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/goodness-akinduko-8649451b5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-5 w-5 text-gray-700 dark:text-gray-300" />
+                  </a>
+                </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <Button
                   size="lg"
                   onClick={() => scrollToSection('projects')}
-                  className="group bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white px-8"
+                  className="group bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white px-8 font-medium"
                 >
-                  View My Work
+                  View My Projects
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
 
@@ -63,7 +95,7 @@ export function HeroSection() {
                   size="lg"
                   variant="outline"
                   onClick={() => scrollToSection('contact')}
-                  className="px-8"
+                  className="px-8 font-medium"
                 >
                   <Mail className="mr-2 h-4 w-4" />
                   Contact Me

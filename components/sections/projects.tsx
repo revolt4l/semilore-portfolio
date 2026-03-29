@@ -68,7 +68,7 @@ export function ProjectsSection() {
             </span>
           </h2>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-12 text-lg">
-            Building innovative solutions that make a difference
+            Showcasing my latest projects and work
           </p>
 
           {loading ? (
@@ -89,68 +89,66 @@ export function ProjectsSection() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
-                <Card
+                <div
                   key={project.id}
-                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2"
+                  className="group rounded-xl border-2 border-gray-200 dark:border-gray-800 overflow-hidden hover:border-blue-400 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white dark:bg-gray-900"
                   style={{
-                    animationDelay: `${index * 100}ms`,
+                    animationDelay: `${index * 50}ms`,
                   }}
                 >
-                  <CardHeader>
-                    {project.image_url && (
-                      <div className="relative h-48 mb-4 overflow-hidden rounded-lg bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-950 dark:to-cyan-950">
-                        <img
-                          src={project.image_url}
-                          alt={project.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        />
-                      </div>
-                    )}
-                    <CardTitle className="text-2xl">{project.title}</CardTitle>
-                    <CardDescription className="text-base">
-                      {project.description}
-                    </CardDescription>
-                  </CardHeader>
+                  {project.image_url && (
+                    <div className="relative h-56 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-950 dark:to-cyan-950">
+                      <img
+                        src={project.image_url}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6 space-y-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        {project.description}
+                      </p>
+                    </div>
 
-                  <CardContent>
                     <div className="flex flex-wrap gap-2">
                       {project.tech_stack.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="secondary"
-                          className="text-xs"
-                        >
+                        <Badge key={tech} variant="secondary" className="text-xs">
                           {tech}
                         </Badge>
                       ))}
                     </div>
-                  </CardContent>
 
-                  <CardFooter className="flex gap-3">
-                    {project.live_url && (
-                      <Button
-                        variant="default"
-                        size="sm"
-                        className="flex-1"
-                        onClick={() => window.open(project.live_url!, '_blank')}
-                      >
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </Button>
-                    )}
-                    {project.github_url && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex-1"
-                        onClick={() => window.open(project.github_url!, '_blank')}
-                      >
-                        <Github className="mr-2 h-4 w-4" />
-                        Code
-                      </Button>
-                    )}
-                  </CardFooter>
-                </Card>
+                    <div className="flex gap-3 pt-2">
+                      {project.live_url && (
+                        <Button
+                          variant="default"
+                          size="sm"
+                          className="flex-1 font-medium"
+                          onClick={() => window.open(project.live_url!, '_blank')}
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Live Demo
+                        </Button>
+                      )}
+                      {project.github_url && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 font-medium"
+                          onClick={() => window.open(project.github_url!, '_blank')}
+                        >
+                          <Github className="mr-2 h-4 w-4" />
+                          GitHub
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
           )}

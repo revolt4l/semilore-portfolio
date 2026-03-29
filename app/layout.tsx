@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Akinduko Goodness | Digital Creator & AI Solutions',
-  description: 'Building technology that solves real-world problems. Expert in Web Development, AI Automation, and Energy Solutions.',
+  title: 'Goodness Semilore | Full Stack Developer & AI Specialist',
+  description: 'Full Stack Developer | AI-Powered Virtual Assistant | Solar Tech Enthusiast. Building modern web applications and helping businesses grow with AI tools.',
   openGraph: {
     images: [
       {

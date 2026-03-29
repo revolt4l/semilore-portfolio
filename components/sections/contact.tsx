@@ -76,11 +76,11 @@ export function ContactSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
             <span className="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
-              Get In Touch
+              Hire Me / Let's Collaborate
             </span>
           </h2>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-12 text-lg">
-            Let's discuss how we can work together
+            I'm available for freelance projects, full-time roles, and collaborations. Let's create something amazing together!
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
